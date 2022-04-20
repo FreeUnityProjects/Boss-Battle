@@ -7,12 +7,15 @@ public class PrefabWeapon : MonoBehaviour {
 	public Transform firePoint;
 	public GameObject bulletPrefab;
 	
+	public void OnFire()
+	{
+		Debug.Log("(OnFire)");
+		Shoot();
+	}
+
+	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Fire1"))
-		{
-			Shoot();
-		}
 	}
 
 	void Shoot ()
